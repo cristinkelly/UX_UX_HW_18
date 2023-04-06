@@ -1,48 +1,125 @@
-
-.inline-block {
-    display: inline-block;
-    vertical-align: top;
+header {
+    background-color: aliceblue;
+    padding: 15px;
+    height: 200px;
 }
 
-.logo {
-    width: 300px;
-    height:300px;
+header li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px 5px;
+    color: rgb(4, 12, 20);
+
+}
+
+  .logo {
+    width: 200px;
+    height: 200px;
     padding: 5px;
     text-align: center;
-}
-
-nav {
-width: 73%;
-margin-left: auto;    
-}
-
-.heroimg {
+  }
+  
+  nav {
+    width: 73%;
+    margin-left: auto;
+  }
+  
+  .heroimg {
+    background-color: blueviolet;
     height: 600px;
-    padding: 25px;
-}
-
-.content {
+    padding: 20px;
+  }
+  
+  .content {
     width: 500px;
     margin: 0 auto;
-}
+    text-align: center;
 
-.imagecontainer {
-    width: 250px;
-    height:100px;
-}
-
-img {
+  }
+  
+  .imagecontainer {
+    width: 500px;
+    height: 300px;
+    margin: 2%;
+    padding: 2%;
+  }
+  
+  img {
     max-width: 100%;
-    height:auto;
-}
+    height: auto;
+  }
 
-footer {
+  #button {
+    color: aquamarine;
+  }
+  
+  .flexcontainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .flexcontainer div {
+    width: 33%;
+    margin: 3%;
+    padding: 5px;
+  }
+  
+  .workgrid {
+    display: grid;
+  }
+  
+  .workgrid{
+    display: grid;
+    grid-template-rows: 350px 350px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image1 text1"
+      "image2 text2";
+  }
+  
+.workgrid img {
+    width:100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+ .img1 {
+    grid-area: image1;
+ }
+ .img2 {
+    grid-area: image2;
+ }
+ .img1, .img2, .text1, .text2 {
+    padding: 80px;
+ }
+
+ .text1 {
+    grid-area: text1;
+ }
+ .text2 {
+    grid-area: text2;
+ }
+
+  footer {
     background-color: #373738;
-    padding: 5%;
-}
-
-ul {
+    padding: 1%;
+  }
+  
+  ul {
     display: inline-block;
     vertical-align: top;
     padding: 5%;
+  }
+  
+  @media (max-width: 600px) {
+    .mywork {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "title"
+      "image1"
+        "text1"
+        "image2"
+        "text2";
+    }
 }
